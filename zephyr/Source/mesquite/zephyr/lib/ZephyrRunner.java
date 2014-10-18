@@ -174,9 +174,20 @@ public abstract class ZephyrRunner extends MesquiteModule implements ExternalPro
 		return success;
 	}
 	
+	/*.................................................................................................................*/
+	/** endJob is called as a module is quitting; modules should put their clean up code here.*/
+	public void endJob() {
+		Debugg.println("\n\n|||||||||||||||||||||||||");
+		Debugg.println("|||||| ZephyrRunner quitting |||||||");
+		Debugg.println("|||||| " + this + " |||||||");
+		Debugg.println("|||||||||||||||||||||||||\n\n");
+	}
 
 	/*.................................................................................................................*/
 	public Tree continueMonitoring(MesquiteCommand callBackCommand) {
+		Debugg.println("\n******\ngetProject in continueMonitoring: " + getProject());
+		Debugg.println("This: "+this+"\n******\n\n");
+
 		logln("Monitoring " + getProgramName() + " run begun.");
 		getProject().incrementProjectWindowSuppression();
 

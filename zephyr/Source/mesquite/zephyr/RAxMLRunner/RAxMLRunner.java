@@ -92,6 +92,7 @@ public class RAxMLRunner extends ZephyrRunner  implements ActionListener, ItemLi
 		}
 		externalProcRunner.setProcessRequester(this);
 		
+		Debugg.println("\n\n\n|||||||||||||| startJob of RAxMLRunner ||||||||||||||||||||\n + "+ this + "\n\n");
 
 /*		if (!MesquiteThread.isScripting() && !queryOptions()){
 			fireEmployee(externalProcRunner);
@@ -641,6 +642,11 @@ WAG, gene2 = 501-1000
 		
 		//----------//
 		boolean success = runProgramOnExternalProcess (programCommand, fileContents, fileNames,  ownerModule.getName());
+
+		Debugg.println("\n********************\ngetProject in getTrees: " + getProject());
+		Debugg.println("This: "+this+"\n******\n");
+		Debugg.printStackTrace("");
+		Debugg.println("\n************************************\n");
 
 		
 		if (success){
