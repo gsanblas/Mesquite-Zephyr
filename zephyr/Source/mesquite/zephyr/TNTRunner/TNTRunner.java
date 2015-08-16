@@ -640,7 +640,7 @@ public class TNTRunner extends ZephyrRunner  implements ItemListener, ActionList
 		logln("");
 
 		MesquiteString arguments = new MesquiteString();
-		arguments.setValue(" proc " + commandsFileName);
+		arguments.setValue(commandsFileName);
 
 		String programCommand = externalProcRunner.getExecutableCommand();
 
